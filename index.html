@@ -1,9 +1,85 @@
-<!DOCTYPE html><html class="no-js"><head><meta charset="utf-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>Matthias Link</title><meta content="" name="description"><meta content="width=device-width" name="viewport"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/29403685.vendor.css"><link rel="stylesheet" href="styles/4f9be5d9.main.css"><link rel="stylesheet" href="webfonts/fonts.css"><body><div id="main"><div id="content"><div class="logo"><img height="35px" src="images/437561ac.logo.svg" width="auto"></div><h1 class="roboto roboto-bold">Matthias Link</h1><h2 class="roboto roboto-regular">Webcraftsman</h2><ul class="social list-inline"><li class="social-item"><a href="http://twitter.com/link_m"><div class="ss-icon ss-twitter"></div></a></li><li class="social-item"><a href="http://facebook.com/matthias.link"><div class="ss-icon ss-facebook"></div></a></li><li class="social-item"><a href="http://instagram.com/link_m"><div class="ss-icon ss-instagram"></div></a></li></ul></div></div><script src="scripts/d41d8cd9.vendor.js"></script><script src="scripts/8971778a.scripts.js"></script><script>var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3497209-3']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();</script>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <title>Matthias Link</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/29403685.vendor.css">
+  <link rel="stylesheet" href="styles/4f9be5d9.main.css">
+  <link rel="stylesheet" href="webfonts/fonts.css">
+
+  <!-- Subtle aurora background -->
+  <style>
+    /* Keep the white canvas on <html> so the aurora (z-index:-1) shows
+       through the body, which would otherwise paint white over it. */
+    html { background-color: #fff; }
+    body { background-color: transparent; }
+    .aurora {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .social li a { transition: color 0.2s ease; }
+    .social li a:hover { color: #303030; }
+    .social li a { display: inline-flex; align-items: center; }
+    .social svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+    .aurora::before,
+    .aurora::after {
+      content: "";
+      position: absolute;
+      inset: -25%;
+      background:
+        radial-gradient(48% 48% at 28% 30%, rgba(0, 0, 0, 0.06), transparent 72%),
+        radial-gradient(46% 46% at 74% 38%, rgba(0, 0, 0, 0.05), transparent 72%),
+        radial-gradient(52% 52% at 52% 76%, rgba(0, 0, 0, 0.045), transparent 72%);
+      filter: blur(48px);
+      will-change: transform;
+      animation: auroraDrift 26s ease-in-out infinite alternate;
+    }
+    .aurora::after {
+      opacity: 0.7;
+      animation-duration: 34s;
+      animation-direction: alternate-reverse;
+    }
+    @keyframes auroraDrift {
+      0%   { transform: translate3d(-4%, -2%, 0) scale(1.05) rotate(0deg); }
+      50%  { transform: translate3d(3%, 2%, 0) scale(1.15) rotate(8deg); }
+      100% { transform: translate3d(-2%, 4%, 0) scale(1.08) rotate(-6deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .aurora::before,
+      .aurora::after { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div id="main">
+    <div id="content">
+      <div class="logo"><img height="35px" src="images/437561ac.logo.svg" width="auto"></div>
+      <h1 class="roboto roboto-bold">Matthias Link</h1>
+      <h2 class="roboto roboto-regular">Webcraftsman</h2>
+      <ul class="social list-inline">
+        <li class="social-item"><a href="https://x.com/link_m" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+        <li class="social-item"><a href="https://github.com/maize" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.21 11.16.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.34-1.73-1.34-1.73-1.09-.73.08-.72.08-.72 1.21.08 1.84 1.22 1.84 1.22 1.07 1.8 2.81 1.28 3.5.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.31-5.47-5.83 0-1.29.47-2.34 1.24-3.17-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.21a11.6 11.6 0 0 1 3-.4c1.02 0 2.05.13 3 .4 2.29-1.53 3.3-1.21 3.3-1.21.66 1.66.25 2.88.12 3.18.77.83 1.24 1.88 1.24 3.17 0 4.53-2.81 5.53-5.49 5.82.43.36.81 1.08.81 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.22.68.83.56A12.02 12.02 0 0 0 24 12.29C24 5.78 18.63.5 12 .5z"/></svg></a></li>
+        <li class="social-item"><a href="https://instagram.com/link_m" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.36 2.67.94 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12C21.33 1.36 20.66.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.41a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="scripts/d41d8cd9.vendor.js"></script>
+  <script src="scripts/8971778a.scripts.js"></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCL4Z27SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XCL4Z27SXV');
+  </script>
+</body>
+</html>
